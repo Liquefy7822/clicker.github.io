@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#clickArea {
+    margin-top: 100px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#counter {
+    font-size: 36px;
+}
