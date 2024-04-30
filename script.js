@@ -1,15 +1,36 @@
 let counter = 0;
+let autoClicks = 0;
 
-const clickArea = document.getElementById('clickArea');
-const counterDisplay = document.getElementById('counter');
+const clickButton = () => {
+    counter++;
+    updateCounter();
+};
+
+const buyAutoClick = () => {
+    if (counter >= 10) {
+        counter -= 10;
+        autoClicks++;
+        updateCounter();
+        setInterval(() => {
+            counter += autoClicks;
+            updateCounter();
+        }, 1000);
+    } else {
+        alert("Not enough clicks to buy auto click!");
+    }
+};
+
+const updateCounter = () => {
+    const counterDisplay = document.getElementById('counter');
+    counterDisplay.textContent = counter;
+};
+
+const clickArea = document.getElementById('clickButton');
 
 clickArea.addEventListener('click', () => {
-    counter++;
-    counterDisplay.textContent = counter;
+    clickButton();
+    clickArea.style.backgroundColor = "lightgreen";
+    setTimeout(() => {
+        clickArea.style.backgroundColor = "";
+    }, 100);
 });
-
-// Optional: Implement automatic increase in counter (idle game feature)
-setInterval(() => {
-     counter++;
-     counterDisplay.textContent = counter;
- }, 1000); // Increase counter every second
