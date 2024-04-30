@@ -3,16 +3,24 @@ body {
     text-align: center;
 }
 
-#clickButton {
-    margin-top: 100px;
-    cursor: pointer;
-    font-size: 24px;
-}
-
 #counter {
-    font-size: 36px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-#autoClickButton {
+#clickButton {
+    margin-bottom: 20px;
+}
+
+.upgrade {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+a {
+    display: block;
     margin-top: 20px;
 }
