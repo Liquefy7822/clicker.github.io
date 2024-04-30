@@ -34,3 +34,4 @@ clickArea.addEventListener('click', () => {
         clickArea.style.backgroundColor = "";
     }, 100);
 });
+
